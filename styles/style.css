@@ -1519,6 +1519,7 @@ body {
   font-weight: bold;
   animation: fadeInOut 3s infinite;
   opacity: 0;
+  white-space: nowrap;
 }
 
 @keyframes fadeInOut {
