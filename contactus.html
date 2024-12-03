@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zohari</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="scripts/script.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html"><img src="./images/logo.png" class="logo" alt="logo zohari"></a>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            ☰
+        </button>
+        <ul class="nav-links">
+            <li ><a href="home.html" class="linkcontact">About Us</a></li>
+            <li ><a href="home.html" class="linkcontact">Pricing</a></li>
+            <li ><a href="home.html" class="linkcontact">Features</a></li>
+            <li ><a href="home.html" class="contact-btn">Contact Us</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero-contactCover" style="background-image: url('./images/contactus.jpg');" id="change-point">
+        <div class="contactgradient"></div>
+        <div class="contacttitle">
+            Contact Us
+        </div>
+    </section>
+
+
+
+    <section class="contact-form">
+        <h2>Do you have a Question?</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="tel" placeholder="Your Phone" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Submit Form</button>
+        </form>
+    </section>
+</body>
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo and Contact Info -->
+        <div class="footer-section logo-contact">
+            <img src="./images/logo.png" class="logo-img" alt="Quote Icon" />
+            <p><span class="icon"><img src="./images/locationpin.png" alt="Quote Icon" /></span> Nairobi, Kenya</p>
+            <p><span class="icon"><img src="./images/phone-call.png" alt="Quote Icon" /></span> +254 797 844 203</p>
+            <p><span class="icon"><img src="./images/email.png" alt="Quote Icon" /></span> info@zohari.tech</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section quick-links">
+            <h3>Quick Links</h3>
+            <div class="links">
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-section newsletter">
+            <h3>Newsletter</h3>
+            <p>Signup for our newsletter to get the latest news, updates, and special offers in your inbox.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required />
+                <button type="submit">→</button>
+            </form>
+            <p class="note">Your email is safe with us. We do not spam.</p>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-position">
+        <div class="footer-bottom">
+            <p>Copyright 2024 - Zohari</p>
+            <div class="footer-links">
+                <a href="#">FAQs</a>
+                <a href="#">Help Center</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="./images/linkedin.png" alt="Quote Icon" /></a>
+                <a href="#"><img src="./images/twitter.png" alt="Quote Icon" /></a>
+                <a href="#"><img src="./images/facebook.png" alt="Quote Icon" /></a>
+
+            </div>
+            <a href="#"><img src="./images/scrollup.png" alt="Quote Icon" /></a>
+        </div>
+    </div>
+</footer>
+
+</html>
+
+<!-- Title icon -->
+<script>
+    // Set the favicon dynamically
+    const favicon = document.createElement("link");
+    favicon.rel = "icon";
+    favicon.href = "./images/logo.ico"; // Path to your local image file
+    document.head.appendChild(favicon);
+
+    // Update the title with an icon-like text prefix
+    const iconText = "🔧 "; // Text-based icon (optional if favicon suffices)
+    document.title = document.title;
+</script>
+
+
+<script>
+    // Show the form when the "Contact Us" button is clicked
+    const contactUsButton = document.getElementById("contactUsButton");
+    const contactForm = document.getElementById("contactForm");
+
+    contactUsButton.addEventListener("click", () => {
+        contactForm.style.display = "block";
+        contactForm.scrollIntoView({ behavior: "smooth" });
+    });
+
+    // Handle form submission
+    contactForm.addEventListener("submit", (e) => {
+        e.preventDefault(); // Prevent actual form submission
+
+        // Get the form values
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const message = document.getElementById("message").value;
+
+        // Construct the mailto URL
+        const mailtoLink = `mailto:info@zohari.tech?subject=Contact Us Form Submission&body=Name: ${encodeURIComponent(
+            name
+        )}%0AEmail: ${encodeURIComponent(email)}%0APhone: ${encodeURIComponent(phone)}%0AMessage: ${encodeURIComponent(
+            message
+        )}`;
+
+        // Open the mailto link
+        window.location.href = mailtoLink;
+    });
+</script>
