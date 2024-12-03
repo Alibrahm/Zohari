@@ -932,6 +932,10 @@ body {
   letter-spacing: 0.029em;
 }
 
+.grid-item .overlay span{
+  max-width: 98%;
+}
+
 .grid-item:hover .overlay span {
   opacity: 1;
   margin-top: 1px;
