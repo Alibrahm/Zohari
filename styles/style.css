@@ -627,10 +627,10 @@ body {
 } */
 /* Replace the SCSS loop with hardcoded styles */
 .card:nth-child(1):before {
-  background-image: url("https://s3-alpha-sig.figma.com/img/10c2/9218/092b7ba7568dd91cb7bd71f3bbc243f8?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=inAdG0pXaLFT-qu8I9KSyBA-auNote73~z95F7-FsWtufXxp1twfCfZmVdhD-cEDvexyec-iKlEhlhdB3UL4-zkZ6rvf6FqK8G4KEQYjSbQblDn3ES4cCPVK9L1t0n~wVLzwOSNgTg1QoiEfrHognzvUN4VaLHCY~yU71JPRE2sgBCeltfUi0DYjqVqave0MfPNihNn4ZdtHz7Fk084aOwPu27ABUPlZCh-i9r9lRbOS4SagMWFF33vIZZcYUGgTrq10Ya1ZZ-D8YabxbocFOyrSihbfI5o7JxrCVGRmG-jMBFnNrlFmQ1hz1Wf0S4FTta2xU7dMvyH9mrE-hu3pJA__");
+  background-image: url("../images/visionview.jpg");
 }
 .card:nth-child(2):before {
-  background-image: url("https://s3-alpha-sig.figma.com/img/ef9f/9c65/a1ed4ca991b2a8ee2c58f13029371e68?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=edPeo3yONNLc3fexVwJirDem0wcL4DmaPVcHnUOTvGV-Fcwd7UVrrGEvkysOIEiEiCRNSjfZ3rHagoisPQJ7hx-HTsHED8fBobatU1qqa~7gVO4mCkqrp6ipj6MWBbXKbzW9W16kiZqUsj42f4e3HnvNZr4hkZNYm8xDgtWYbhkwC8pUpU-hge04QzdF6hnKPAaurdBj~ARVzfLbiOUYHPEmjWflQNO8-OoOOac-s2wyQ5Euiux2POmIRLyOOQvUMmmDn-7hMFhKSLySutHEMIuk7Ic9DqdGogxN27YMGantCGtcGoQBLei8YS5useXj77~HPmX6R4TyAFH4yIl3~g__");
+  background-image: url("../images/missiontarget.jpg");
 }
 .card:nth-child(3):before {
   background-image: url("https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ");
@@ -1064,7 +1064,7 @@ body {
       rgba(0, 0, 0, 0.526),
       rgba(0, 0, 0, 0.526)
     ),
-    url("https://s3-alpha-sig.figma.com/img/aa12/07df/636373618afcedb3f535cc0dfb7b16b8?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=k6ThnKOaTjuoIXxpbVDInupG4OxqN~~8U7PUyjvCr8~F0eH~emckceeDqv0edPDPTC~luBbSMtjpgQcqA-MwfnvVx40SJN-yPc8R6R7TA8COebUABBWmjIwxlEfiLqYtKNqaaqqZCl4d8Szt4UN5ABObxD6HYij9FG9HqTwHT2xEuGs21njTbml12cxJGjBRlZtfrxnyXS78CuXCvWpTJ~VdpCoCdhFeKP8s1SROE4SxWOmmxYKbx5BIfBgJMvY3hXqqjzu~vg-XKvaL~mG-6YxkfwBQG673pJnapTcnUVoPSi5c~85FoUf-KF5wSvl3jvsh~X9ZmPYq3n7gnPhV3Q__")
+    url("../images/testimonialbgd.jpg")
       no-repeat center center/cover;
   padding: 50px 20px;
   text-align: center;
