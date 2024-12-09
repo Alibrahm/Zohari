@@ -1085,6 +1085,10 @@ body {
   .grid-wrapper {
     padding: 0px;
   }
+
+  .griditemrow:hover .overlay {
+  transform: translateY(27%);
+}
   /* .grid-item .overlay {
     transform: translateY(27%);
   } */
