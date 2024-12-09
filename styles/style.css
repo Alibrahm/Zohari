@@ -278,23 +278,24 @@ body {
   font-size: 14px;
   letter-spacing: 1px;
   padding: 8px;
-  padding-inline: 28px;
+  padding-inline: 26px;
 }
 
 .orange-btn {
-  background: linear-gradient(#ffae42 100%, #f3d643 100%);
+  background: linear-gradient(196deg, #ffae42, #f3d643 90.71%),
+    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
   color: #fff;
   line-height: 17.41px;
   font-size: 14px;
   letter-spacing: 1px;
   border-radius: 20px;
   padding: 8px;
-  padding-inline: 28px;
+  padding-inline: 26px;
 }
 
 /* Features Section */
 .features {
-  /* padding: 50px 20px; */
   background-color: #f9f9f9;
   text-align: center;
 }
@@ -312,11 +313,10 @@ body {
 
 .feature-item {
   position: relative;
-  display: flex; /* Enables Flexbox */
-  flex-direction: column; /* Stacks items vertically */
-  justify-content: center; /* Centers items vertically */
-  align-items: center; /* Centers items horizontally */
-  /* border-radius: 8px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
   transition: background 0.5s ease, color 0.5s ease;
   height: 340px; /* Adjust as needed to define the container's height */
@@ -335,29 +335,28 @@ body {
   font-size: 1.2rem;
   font-weight: 700;
   margin-top: 18px;
-  /* margin: 10px 0; */
 }
 
 .feature-item p {
-  color: #4b4b4b;
+  color: #000000;
   letter-spacing: 1px;
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.055em;
   padding-inline: 12px;
 }
 .featuretexts {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 174, 66, 1) 100%,
-    rgba(243, 214, 67, 1) 100%
-  );
+  background: linear-gradient(247deg, #ffae42, #f3d643 70.71%),
+    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
   color: #fff;
   height: 100%;
   width: 100%;
-  display: flex; /* Enables Flexbox */
-  flex-direction: column; /* Stacks items vertically */
-  justify-content: center; /* Centers items vertically */
-  align-items: center; /* Centers items horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .keyimages {
@@ -397,22 +396,16 @@ body {
 
 .feature-item:hover {
   color: #fff;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 173, 66, 0.877) 100%,
-    rgba(243, 214, 67, 0.89) 95%
-  );
-  transition: background 0.5s ease, color 0.5s ease;
+  background: linear-gradient(247deg, #ffae42, #f3d643 80.71%),
+    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  transition: background 0.7s ease, color 0.5s ease;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .features-grid {
     grid-template-columns: 1fr; /* Single column on mobile */
-  }
-
-  .feature-item {
-    padding: 15px; /* Adjust padding for smaller screens */
   }
 
   .feature-item h3 {
@@ -427,6 +420,14 @@ body {
   }
   .orange-btn {
     padding-inline: 16px;
+  }
+
+  .featuretexts {
+    height: auto;
+    padding: 12px 4px;
+    font-weight: bold;
+    font-family: "Gilroy", sans-serif;
+    font-size: 20px;
   }
 }
 
@@ -460,11 +461,11 @@ body {
 }
 
 .welcome-content p {
-  font-size: 14px; /* Default font size for paragraph */
-  line-height: 1.6; /* Improve readability */
+  font-size: 15px;
+  line-height: 1.4;
   margin-right: 124px;
   letter-spacing: 0.6px;
-  color: rgba(0, 0, 0, 0.925);
+  color: #000000;
 }
 
 .welcome-content hr {
@@ -669,6 +670,7 @@ body {
   justify-content: start;
   width: 100%;
   align-items: center;
+  padding: 0px 19px 0px 0px;;
 }
 
 .card:hover .icons {
@@ -720,7 +722,7 @@ body {
   }
 
   .content {
-    transform: translateY(calc(103% - 3.6rem));
+    transform: translateY(calc(100% - 3.6rem))
   }
 
   /* .content > *:not(.title) {
