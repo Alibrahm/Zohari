@@ -340,7 +340,7 @@ body {
 .feature-item p {
   color: #000000;
   letter-spacing: 1px;
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: 0.055em;
   padding-inline: 12px;
 }
@@ -882,7 +882,7 @@ body {
 
 .overlay {
   position: absolute;
-  bottom: 106px;
+  bottom: 112px;
   width: 100%;
   background-image: linear-gradient(#00000000, #000000, #000000);
   color: #fff;
@@ -1003,6 +1003,7 @@ body {
   padding: 25px;
   width: 100%;
   color: white;
+  font-weight: bold;
 }
 
 /* Card-specific styles */
@@ -1084,9 +1085,9 @@ body {
   .grid-wrapper {
     padding: 0px;
   }
-  .grid-item .overlay {
-    transform: translateY(47%);
-  }
+  /* .grid-item .overlay {
+    transform: translateY(27%);
+  } */
   .griditemtitle {
     margin-top: 5px;
   }
@@ -1099,23 +1100,34 @@ body {
   .griditemrow .overlay {
     transform: translateY(27%);
   }
+  .grid-item:hover .overlay {
+    transform: translateY(27%);
+  }
   .overlay p {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.025em;
     margin: 0;
     text-align: center;
     opacity: 1;
   }
+  .griditemrow {
+    height: auto;
+  }
 
   .grid-item .overlay span {
     opacity: 1;
+    font-size: 18.5px;
   }
   .griditemrow .overlay span {
     opacity: 1;
+    font-size: 18.5px;
   }
   .overlay {
     background-image: linear-gradient(#00000061, #000000, #000000d1);
+    transform: translateY(28%);
+    display: flex;
+    justify-content: space-evenly;
   }
   .grid-item img {
     width: 100%;
@@ -1167,7 +1179,7 @@ body {
     font-size: 12px;
   }
   .overlay p {
-    font-size: 14px;
+    font-size: 17px;
   }
 }
 
