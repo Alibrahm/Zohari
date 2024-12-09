@@ -278,23 +278,18 @@ body {
   font-size: 14px;
   letter-spacing: 1px;
   padding: 8px;
-  padding-inline: 32px;
+  padding-inline: 28px;
 }
 
 .orange-btn {
-  background: rgb(255, 174, 66);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 174, 66, 1) 100%,
-    rgba(243, 214, 67, 1) 100%
-  );
+  background: linear-gradient(#ffae42 100%, #f3d643 100%);
   color: #fff;
   line-height: 17.41px;
   font-size: 14px;
   letter-spacing: 1px;
   border-radius: 20px;
   padding: 8px;
-  padding-inline: 32px;
+  padding-inline: 28px;
 }
 
 /* Features Section */
@@ -725,7 +720,7 @@ body {
   }
 
   .content {
-    transform: translateY(calc(103% - 3.9rem));
+    transform: translateY(calc(103% - 3.6rem));
   }
 
   /* .content > *:not(.title) {
@@ -842,7 +837,7 @@ body {
   background-color: #fff;
   border-radius: 12px;
   overflow: hidden;
-  height: 228px;
+  height: fit-content;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   display: flex;
@@ -873,8 +868,9 @@ body {
 
 .grid-item img {
   width: 100%;
-  height: 100%;
-  display: block;
+  height: 261px;
+  display: flex;
+  justify-content: center;
 }
 
 .overlay {
@@ -930,10 +926,10 @@ body {
   transition: opacity 0.5s ease;
   max-width: 84%;
   letter-spacing: 0.029em;
-  color: #DDDACB;
+  color: #dddacb;
 }
 
-.grid-item .overlay span{
+.grid-item .overlay span {
   max-width: 98%;
 }
 
@@ -1094,7 +1090,7 @@ body {
     padding-inline: 72px;
   }
   .griditemrow .overlay {
-    transform: translateY(47%);
+    transform: translateY(27%);
   }
   .overlay p {
     font-size: 14px;
@@ -1113,6 +1109,12 @@ body {
   }
   .overlay {
     background-image: linear-gradient(#00000061, #000000, #000000d1);
+  }
+  .grid-item img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -1257,7 +1259,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   padding: 28px 0;
-  gap: 42px;
+  gap: 72px;
   margin: 25px 58px;
   font-family: inherit;
 }
@@ -1268,8 +1270,8 @@ body {
 .gradient-overlay {
   position: relative;
   width: 100%;
-  background: radial-gradient(circle at 50% 46%, #245c9c 6%, transparent 49%),
-    linear-gradient(278deg, #6634ff00, #00e5ff00);
+  /* background: radial-gradient(circle at 50% 46%, #245c9c 6%, transparent 49%),
+    linear-gradient(278deg, #6634ff00, #00e5ff00); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1278,6 +1280,15 @@ body {
 .pricingimg {
   background: radial-gradient(circle at 50% 46%, #245c9c 6%, transparent 39%),
     linear-gradient(278deg, #6634ff00, #00e5ff00);
+}
+
+.overlayblur {
+  position: absolute;
+  background: radial-gradient(circle at 50% 46%, #245c9c 6%, transparent 48%),
+    linear-gradient(278deg, #6634ff00, #00e5ff00);
+  filter: blur(12.5px);
+  height: 100%;
+  width: 100%;
 }
 
 .gradient-overlay img {
