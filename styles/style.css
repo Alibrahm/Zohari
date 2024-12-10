@@ -910,7 +910,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   padding: 1px 5px 8px;
-  height: 100%;
+  height: 105%;
   transform: translateY(100%);
   /* transform: translateY(44%); */
   transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -1116,11 +1116,8 @@ body {
   }
 
   .griditemrow:hover .overlay {
-  transform: translateY(27%);
+  transform: translateY(29%);
 }
-  /* .grid-item .overlay {
-    transform: translateY(27%);
-  } */
   .griditemtitle {
     margin-top: 5px;
   }
@@ -1380,12 +1377,13 @@ body {
 }
 
 .pricing-section button {
-  padding: 6px;
+  padding: 5px;
   gap: 10px;
   border-radius: 24px;
-  padding-inline: 24px;
+  padding-inline: 34px;
   color: white;
   background-color: #245c9c;
+  font-size: 16px;
 }
 
 .plansdivider {
