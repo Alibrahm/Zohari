@@ -1070,6 +1070,13 @@ body {
     grid-template-rows: auto; /* Adjust rows automatically */
   }
 
+  .process-title h2 {
+    font-size: 16px;
+    color: #245c9c;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
   .stat-card,
   .right-bottom-row {
     grid-column: auto;
