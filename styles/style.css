@@ -206,6 +206,8 @@ body {
   font-size: 20px;
   font-weight: bolder;
   background: linear-gradient(290deg, #ffae42 29.77%, #ffe97c 98.87%);
+  font-weight: bolder;
+  background: linear-gradient(290deg, #ffae42 29.77%, #ffe97c 98.87%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /* background-clip: text; */
@@ -909,6 +911,24 @@ body {
   background-image: linear-gradient(#00000000, #000000, #000000);
   color: #fff;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1px 5px 8px;
+  height: 105%;
+  transform: translateY(100%);
+  /* transform: translateY(44%); */
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.grid-item:hover .overlay {
+  transform: translateY(43%);
+  background-image: linear-gradient(#000000d6, #000000f5, #0000008c);
+}
+
+.griditemrow:hover .overlay {
+  transform: translateY(48%);
+   background-image: linear-gradient(#000000d6, #000000f5, #0000008c);
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
