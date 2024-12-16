@@ -140,7 +140,7 @@ body {
   position: absolute;
   top: 40%;
   left: 80px;
-  max-width: 680px;
+  max-width: 650px;
   font-family: "Gilroy", sans-serif;
 }
 
@@ -198,9 +198,11 @@ body {
 }
 
 .hero-content p {
-  font-size: 16px;
+  font-size: 17px;
   letter-spacing: 0.029em;
   text-align: left;
+  font-family: "Gilroy", sans-serif;
+  margin-top:16px;
 }
 .hero-title {
   font-size: 20px;
@@ -210,7 +212,7 @@ body {
   background: linear-gradient(290deg, #ffae42 29.77%, #ffe97c 98.87%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* background-clip: text; */
+  margin-bottom: 10px;
   color: transparent;
   text-align: left;
   line-height: 25px;
@@ -235,6 +237,7 @@ body {
   .hero-title {
     font-size: 18px;
     line-height: 22px;
+    margin-bottom: 2px;
   }
   .hero-content span {
     font-size: 24px;
@@ -342,7 +345,8 @@ body {
 .feature-item p {
   color: #000000;
   letter-spacing: 1px;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 600;
   letter-spacing: 0.055em;
   padding-inline: 12px;
 }
@@ -498,12 +502,12 @@ body {
   }
 
   .welcome-content p {
-    font-size: 16px; 
+    font-size: 16px;
     margin-inline: 0px;
     text-align: left;
   }
 
-  .card{
+  .card {
     height: 343px;
   }
 
@@ -516,10 +520,15 @@ body {
     width: 100%;
     height: 224%;
     pointer-events: none;
-    background-image: linear-gradient(to bottom, rgb(0 0 0 / 2%) 9%, rgb(0 0 0 / 10%) 19%, rgba(0 0 0 / 0.7) 50%);
+    background-image: linear-gradient(
+      to bottom,
+      rgb(0 0 0 / 2%) 9%,
+      rgb(0 0 0 / 10%) 19%,
+      rgba(0 0 0 / 0.7) 50%
+    );
     transform: translateY(0%);
     transition: transform 0.7s ease-in-out;
-}
+  }
 }
 
 .mission-vision {
@@ -903,7 +912,6 @@ body {
   justify-content: center;
 }
 
-
 .overlay {
   position: absolute;
   bottom: 112px;
@@ -928,7 +936,7 @@ body {
 
 .griditemrow:hover .overlay {
   transform: translateY(48%);
-   background-image: linear-gradient(#000000d6, #000000f5, #0000008c);
+  background-image: linear-gradient(#000000d6, #000000f5, #0000008c);
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -946,7 +954,7 @@ body {
 
 .griditemrow:hover .overlay {
   transform: translateY(48%);
-   background-image: linear-gradient(#000000d6, #000000f5, #0000008c);
+  background-image: linear-gradient(#000000d6, #000000f5, #0000008c);
 }
 .overlay .step {
   font-size: 16px;
@@ -1120,7 +1128,7 @@ body {
     color: #245c9c;
     font-weight: 600;
     letter-spacing: 0.02em;
-}
+  }
 
   .stat-card,
   .right-bottom-row {
@@ -1139,8 +1147,8 @@ body {
   }
 
   .griditemrow:hover .overlay {
-  transform: translateY(29%);
-}
+    transform: translateY(29%);
+  }
   .griditemtitle {
     margin-top: 5px;
   }
@@ -1689,7 +1697,6 @@ body {
 @media (max-width: 768px) {
   .contact-form {
     width: 100%;
-    /* max-width: 600px; */
     text-align: center;
     padding: 22px;
     background-color: #fff;
@@ -1703,11 +1710,14 @@ body {
 
 .animated-text {
   display: inline-block;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  letter-spacing: 0.028em;
   animation: fadeInOut 3s infinite;
   opacity: 0;
   white-space: nowrap;
+  line-height: 58px;
+  text-shadow: 2px 1px #ffffff;
 }
 
 @keyframes fadeInOut {
