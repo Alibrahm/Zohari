@@ -1713,7 +1713,7 @@ body {
   font-size: 1.8rem;
   font-weight: bolder;
   letter-spacing: 0.028em;
-  animation: fadeInOut 3s infinite;
+  animation: fadeInOut 3s ease-in-out infinite;
   opacity: 0;
   white-space: nowrap;
   line-height: 58px;
@@ -1724,11 +1724,14 @@ body {
   0% {
     opacity: 0;
   }
-  20%,
-  90% {
+  20% {
+    opacity: 1;
+  }
+  80% {
     opacity: 1;
   }
   100% {
     opacity: 0;
   }
 }
+
