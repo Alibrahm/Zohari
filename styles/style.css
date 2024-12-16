@@ -140,7 +140,7 @@ body {
   position: absolute;
   top: 40%;
   left: 80px;
-  max-width: 650px;
+  max-width: 680px;
   font-family: "Gilroy", sans-serif;
 }
 
@@ -202,7 +202,7 @@ body {
   letter-spacing: 0.029em;
   text-align: left;
   font-family: "Gilroy", sans-serif;
-  margin-top:16px;
+  margin-top: 16px;
 }
 .hero-title {
   font-size: 20px;
@@ -313,7 +313,7 @@ body {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Four columns on large screens */
+  grid-template-columns: repeat(5, 1fr); 
 }
 
 .feature-item {
@@ -324,7 +324,7 @@ body {
   align-items: center;
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
   transition: background 0.5s ease, color 0.5s ease;
-  height: 316px; /* Adjust as needed to define the container's height */
+  height: 316px;
   overflow: hidden;
 }
 
@@ -372,11 +372,11 @@ body {
 }
 
 .keyimages img {
-  transition: filter 0.3s ease-in-out; /* Smooth transition for filter */
+  transition: filter 0.3s ease-in-out; 
 }
 
 .feature-item:hover .keyimages img {
-  filter: hue-rotate(180deg) brightness(9.2); /* Invert colors and make the image brighter */
+  filter: hue-rotate(180deg) brightness(9.2);
   transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
 }
 
@@ -411,15 +411,17 @@ body {
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .features-grid {
-    grid-template-columns: 1fr; /* Single column on mobile */
+    grid-template-columns: 1fr;
   }
 
   .feature-item h3 {
-    font-size: 1rem; /* Slightly smaller font for titles */
+    font-size: 1rem;
   }
 
   .feature-item p {
-    font-size: 0.9rem; /* Adjust paragraph text size */
+    font-size: 0.8rem;
+    line-height: 23px;
+    letter-spacing: 0.059em;
   }
   .blue-btn {
     padding-inline: 16px;
@@ -440,7 +442,7 @@ body {
 /* Welcome Section */
 .welcome-content {
   position: relative;
-  z-index: 1; /* Ensures the content is above the background */
+  z-index: 1;
   color: #666;
   display: flex;
   flex-direction: row;
@@ -485,20 +487,27 @@ body {
 /* Media Query for Mobile Screens */
 @media (max-width: 768px) {
   .welcome-content {
-    flex-direction: column; /* Stack elements vertically */
-    text-align: center; /* Center-align text */
-    gap: 16px; /* Reduce the gap */
-    padding: 0 16px; /* Add some padding for smaller screens */
+    flex-direction: column; 
+    text-align: center; 
+    gap: 16px;
+    padding: 0 16px; 
     margin-right: 0px;
     margin-inline: 0px;
   }
 
   .welcome-content h1 {
-    font-size: 1.5rem; /* Reduce heading size */
+    font-size: 1.5rem;
+    text-align: left;
   }
 
   .welcome-content h3 {
-    font-size: 1.2rem; /* Reduce sub-heading size */
+    font-size: 1.2rem; 
+    text-align: left;
+  }
+
+  .welcometitle {
+    width: 100%;
+    align-items: left;
   }
 
   .welcome-content p {
@@ -651,7 +660,7 @@ body {
   background: linear-gradient(90deg, rgba(255, 173, 66, 0.877) 100%, rgba(243, 214, 67, 0.89) 95%);
   transition: background 0.5s ease, color 0.5s ease;
 } */
-/* Replace the SCSS loop with hardcoded styles */
+/*welcome cards */
 .card:nth-child(1):before {
   background-image: url("../images/visionview.jpg");
 }
@@ -755,18 +764,9 @@ body {
   .card:after {
     transform: translateY(0);
   }
-
   .content {
     transform: translateY(calc(100% - 3.6rem));
   }
-
-  /* .content > *:not(.title) {
-    opacity: 0;
-    transform: translateY(1rem);
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-     /* background: none; */
-  /* }  */
-
   .card:hover,
   .card:focus-within {
     align-items: center;
@@ -813,15 +813,12 @@ body {
   height: 100%;
 }
 
-/* .grid-wrapper{
-  height: 400px;
-} */
-
 .process-flow {
   text-align: center;
   grid-column: 2 / 5;
   background-color: #f5f5f5;
   padding-inline: 72px;
+  padding-block: 10px;
 }
 
 .title-underline {
@@ -837,8 +834,6 @@ body {
   justify-content: left;
   flex-direction: column;
   text-align: left;
-  margin-top: 30px;
-  margin-bottom: 30px;
 }
 .process-title h2 {
   font-size: 12px;
@@ -856,31 +851,28 @@ body {
 .grid-wrapper {
   padding: 5px 6px;
 }
-.grid-container {
+
+.grid-container,
+.grid-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
 }
 
+.grid-container {
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  );
+}
+
 .grid-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(320px, 1fr)
+  ); 
   margin-top: 13px;
-  margin-bottom: 18px;
 }
-.grid-item {
-  position: relative;
-  background-color: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  /* height: fit-content; */
-  height: 280px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  display: flex;
-  justify-content: center;
-}
+
 
 .griditemtitle {
   display: flex;
@@ -889,24 +881,54 @@ body {
   margin-top: 42px;
 }
 
+.grid-item,
 .griditemrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   position: relative;
   background-color: #fff;
   border-radius: 12px;
   overflow: hidden;
-  height: 250px;
-  justify-content: center;
+  min-height: 34vh; 
+  max-height: 500px;
+  padding: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  display: flex;
 }
+
+.grid-item img,
+.griditemrow img {
+  width: 100%;
+  height: auto;
+  max-height: 210px; 
+  object-fit: cover;
+  object-position: top center;
+}
+
+.griditemrow img {
+  width: 100%;
+  height: auto;
+  max-height: 210px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.gridimage2 {
+  width: 100%;
+  height: auto;
+  max-height: 228px;
+  object-fit: cover;
+  object-position: center !important;
+}
+
 .grid-item:hover {
   transform: translateY(-8px);
 }
 
 .grid-item img {
   width: 100%;
-  /* height: 261px; */
   height: fit-content;
   display: flex;
   justify-content: center;
@@ -925,8 +947,7 @@ body {
   padding: 1px 5px 8px;
   height: 105%;
   transform: translateY(100%);
-  /* transform: translateY(44%); */
-  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .grid-item:hover .overlay {
@@ -935,15 +956,13 @@ body {
 }
 
 .griditemrow:hover .overlay {
-  transform: translateY(48%);
+  transform: translateY(41%);
   background-image: linear-gradient(#000000d6, #000000f5, #0000008c);
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   padding: 1px 5px 8px;
   height: 105%;
-  transform: translateY(100%);
-  /* transform: translateY(44%); */
   transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -952,10 +971,6 @@ body {
   background-image: linear-gradient(#000000d6, #000000f5, #0000008c);
 }
 
-.griditemrow:hover .overlay {
-  transform: translateY(48%);
-  background-image: linear-gradient(#000000d6, #000000f5, #0000008c);
-}
 .overlay .step {
   font-size: 16px;
   font-weight: bold;
@@ -986,6 +1001,7 @@ body {
   transition: opacity 0.5s ease;
   max-width: 84%;
   letter-spacing: 0.029em;
+  line-height: 28px;
   color: #dddacb;
 }
 
@@ -1010,9 +1026,21 @@ body {
   margin-top: 6px;
 }
 
-/* .overlay:hover {
-  background-image: linear-gradient(#00000061, #000000, #000000d1);
-} */
+@media screen and (max-width: 1920px)  {
+  .griditemrow:hover .overlay,
+  .grid-item:hover .overlay {
+    transform: translateY(46%);
+    background-image: linear-gradient(#000000d6, #000000f5, #0000008c);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2px 10px 12px; 
+    height: 110%; 
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+}
+
+
 
 /* Statistics style */
 .stats-section {
@@ -1092,7 +1120,7 @@ body {
 
 .purple {
   background: linear-gradient(135deg, #6f337a, #bf2b56);
-  grid-column: 2 / 20; /* Occupies the second column */
+  grid-column: 2 / 20; 
   grid-row: 1 / 2;
   line-height: 44px;
 }
@@ -1100,9 +1128,9 @@ body {
 /* Nested grid for Blue and Orange cards */
 .right-bottom-row {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  gap: 8px; /* Gap between Blue and Orange */
-  grid-column: 2 / 20; /* Positioning in the main grid */
+  grid-template-columns: 1fr 1fr; 
+  gap: 8px; 
+  grid-column: 2 / 20; 
   grid-row: 2 / 3;
 }
 
@@ -1119,8 +1147,8 @@ body {
 /* Responsiveness */
 @media (max-width: 768px) {
   .stats-section {
-    grid-template-columns: 1fr; /* Single column for smaller screens */
-    grid-template-rows: auto; /* Adjust rows automatically */
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto;
   }
 
   .process-title h2 {
@@ -1139,15 +1167,15 @@ body {
   }
 
   .right-bottom-row {
-    grid-template-columns: 1fr; /* Stack Blue and Orange vertically */
-    gap: 8px; /* Smaller gap for mobile */
+    grid-template-columns: 1fr; 
+    gap: 8px; 
   }
   .grid-wrapper {
     padding: 0px;
   }
 
   .griditemrow:hover .overlay {
-    transform: translateY(29%);
+    transform: translateY(35%);
   }
   .griditemtitle {
     margin-top: 5px;
@@ -1159,10 +1187,10 @@ body {
     padding-inline: 72px;
   }
   .griditemrow .overlay {
-    transform: translateY(27%);
+    transform: translateY(35%);
   }
   .grid-item:hover .overlay {
-    transform: translateY(27%);
+    transform: translateY(35%);
   }
   .overlay p {
     font-size: 16px;
@@ -1175,18 +1203,20 @@ body {
   .griditemrow {
     height: auto;
   }
-
+  .grid-item {
+    height: auto;
+  }
   .grid-item .overlay span {
     opacity: 1;
-    font-size: 18.5px;
+    font-size: 15.5px;
   }
   .griditemrow .overlay span {
     opacity: 1;
-    font-size: 18.5px;
+    font-size: 15.5px;
   }
   .overlay {
     background-image: linear-gradient(#00000061, #000000, #000000d1);
-    transform: translateY(28%);
+    transform: translateY(35%);
     display: flex;
     justify-content: space-evenly;
   }
@@ -1734,4 +1764,3 @@ body {
     opacity: 0;
   }
 }
-
